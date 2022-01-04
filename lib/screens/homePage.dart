@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Product List'),
+        title: const Text('Product List'),
       ),
 
 
@@ -29,14 +29,15 @@ class _HomePageState extends State<HomePage> {
             return Center(child: Text("${data.error}"));
           }else if(data.hasData){
             var items = data.data as List<Products>;
+            print(items.length);
             return ListView.builder(
               itemCount: items == null ? 0 : items.length,
                 itemBuilder: (context, index){
                   return Card(
                     elevation: 5,
-                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     child: Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,124 +54,48 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Expanded(
                               child: Container(
-                                padding: EdgeInsets.only(bottom: 8),
+                                padding: const EdgeInsets.only(bottom: 8),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child: Text(
                                         items[index].productName.toString(),
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child: Text(items[index].id.toString()),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child: Text(
-                                        items[index].brandId.toString(),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].categoryId.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].subcategoryId.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].subsubcategoryId.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].productCode.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].productQty.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].productTags.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].productSize.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child:
                                       Text(items[index].sellingPrice.toString(),),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child:
                                       Text(items[index].discountPrice.toString(),),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child:
                                       Text(items[index].productShortDescp.toString(),),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child:
                                       Text(items[index].productLongDescp.toString(),),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].hotDeals.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].featured.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].specialOffer.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].specialDeals.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].status.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].productViews.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
-                                      child:
-                                      Text(items[index].vedio.toString(),),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child:
                                       Text(items[index].createdAt.toString(),),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 8, right: 8),
+                                      padding: const EdgeInsets.only(left: 8, right: 8),
                                       child:
                                       Text(items[index].updatedAt.toString(),),
                                     ),
@@ -184,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                 }
             );
           }else{
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
