@@ -24,15 +24,23 @@ class _HomePageState extends State<HomePage> {
       body: FutureBuilder(
         future: apiService.allProductApiReq(),
           builder: (context, data) {
+
+
+
           if(data.hasError){
             print(data.error.toString());
             return Center(child: Text("${data.error}"));
-          }else if(data.hasData){
+          }
+
+
+          else if(data.hasData){
             var items = data.data as List<Products>;
             print(items.length);
             return ListView.builder(
+
               itemCount: items == null ? 0 : items.length,
                 itemBuilder: (context, index){
+
                   return Card(
                     elevation: 5,
                     margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -108,13 +116,21 @@ class _HomePageState extends State<HomePage> {
                   );
                 }
             );
-          }else{
+          }
+
+          else{
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          }
+
+
+
+        }
       ),
+
+
+
     );
   }
 }
