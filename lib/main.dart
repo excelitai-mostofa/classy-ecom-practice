@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_classy_ecom/screens/homePage.dart';
+import 'package:practice_classy_ecom/screens/sign_In_Page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const SignInScreen(),
     );
   }
 }

@@ -5,6 +5,8 @@ import 'package:practice_classy_ecom/services/productApiService.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  static const routeName = '/home-page';
+
   @override
   _HomePageState createState() => _HomePageState();
 }

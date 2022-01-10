@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_classy_ecom/widgets/signIn_Form.dart';
 
 
 class SignInScreen extends StatefulWidget {
@@ -25,7 +26,25 @@ class _SignInScreenState extends State<SignInScreen> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-
+                    SizedBox(height: 20),
+                    Text(
+                      "Welcome Back",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "Sign in with your email and password  \nor continue with social media",
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 20), //SizeConfig.screenHeight * 0.08),
+                    SignInForm(),
+                    SizedBox(height: 20), //SizeConfig.screenHeight * 0.08),
+                    SizedBox(
+                      height: 20, //getProportionateScreenHeight(20),
+                    ),
                   ],
                 ),
               ),
