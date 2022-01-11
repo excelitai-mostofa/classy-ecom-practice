@@ -26,7 +26,7 @@ class _SignInFormState extends State<SignInForm> {
         child: Column(
           children: [
             buildEmailFormField(),
-            SizedBox(height: 30), //getProportionateScreenHeight(30.0)),
+            SizedBox(height: 30),
             buildPasswordFormField(),
             SizedBox(height: 30),
             DefaultButton(
@@ -69,8 +69,6 @@ class _SignInFormState extends State<SignInForm> {
       decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );
@@ -91,8 +89,6 @@ class _SignInFormState extends State<SignInForm> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
     );

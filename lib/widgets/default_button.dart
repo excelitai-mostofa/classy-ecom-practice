@@ -13,11 +13,10 @@ class DefaultButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 56,//getProportionateScreenHeight(56),
+      height: 56,
       child: TextButton(
         style: TextButton.styleFrom(
-          shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           primary: Colors.white,
           backgroundColor: Colors.blue
         ),
@@ -25,7 +24,7 @@ class DefaultButton extends StatelessWidget {
         child: Text(
           text!,
           style: TextStyle(
-            fontSize: 18,//getProportionateScreenWidth(18),
+            fontSize: 18,
             color: Colors.white,
           ),
         ),
